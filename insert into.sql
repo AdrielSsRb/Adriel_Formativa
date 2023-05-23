@@ -28,6 +28,8 @@ values  ('Aluno'),('Competidores'),('Professor'),('Secretaria'),('Diretor'),('Co
 insert into acesso(acesso) 
 values  ('Visitante'),('Usuário'),('Gestor'), ('Admin');
 
+select * from usuarios;
+
 insert into usuarios(nome, email, data_aniversario, senha, data_cadastro, id_status, id_ocupação, id_acesso) 
 values ('Adriel', 'adriel.ribeiro@gamail.com', '2004-06-11', '381911', '2023-01-18 20:23:10', 1, 5,4),
 	('Jõao', 'jalves.ribeiro2@gamail.com', '2003-05-15', '010401', '2023-02-18 12:31:15', 1, 1,2),
@@ -37,7 +39,26 @@ values ('Adriel', 'adriel.ribeiro@gamail.com', '2004-06-11', '381911', '2023-01-
 	('André', 'andre.savreda@gamail.com', '2000-04-15', 'senai', '2023-01-18 07:32:06', 1, 4,4),
 	('Hugo', 'hugoidagawa@gamail.com', '2001-09-13', 'sen@i', '2023-01-18 11:12:32', 1, 6, 4);
     
-insert into eventos(nome_evento, inicio_evento, duracao_evento, id_local) 
-values ('reuniao', '2023-18-05 12:00:00', '02:00:00', 3)
-('reuniao', '2023-18-05 12:00:00', '02:00:00', 3)
-('reuniao', '2023-18-05 12:00:00', '02:00:00', 3); 
+insert into eventos(nome_evento, inicio_evento, duracao_evento, max_time_checkin, id_local) 
+values ('reuniao', '2023-05-07 12:00:00', '02:00:00', '2023-05-07 10:00:00',1),
+('palestra', '2023-05-10 13:00:00', '03:00:00', '2023-05-10 22:00:00', 3),
+('apresentação pratica', '2023-06-11 15:00:00', '01:30:00', '2023-06-08 12:00:00', 4);
+
+insert into  check_in(id_usuarios, id_evento, cap_atual)
+values ( 1, 1, '1/3'),
+	( 6, 1, '2/3'),
+    ( 7, 1, '3/3'),
+    ( 1, 2, '1/7'),
+    ( 2, 2, '2/7'),
+    ( 3, 2, '3/7'),
+    ( 4, 2, '4/7'),
+    ( 5, 2, '5/7'),
+    ( 6, 2, '6/7'),
+    ( 7, 2, '7/7'),
+    ( 2, 3, '1/6'),
+    ( 3, 3, '2/6'),
+    ( 5, 3, '3/6');
+    
+    
+    
+	
